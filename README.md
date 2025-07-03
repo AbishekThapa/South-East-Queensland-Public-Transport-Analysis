@@ -2,7 +2,7 @@
 
 This repository contains the code for a full data pipeline and analysis of the South East Queensland (Translink) public transport network. The project demonstrates skills in ETL, database management (PostgreSQL), data cleaning, advanced SQL querying, and data visualization.
 
-The primary script (`main.ipynb`) automates the ingestion and cleaning of raw GTFS data, making it ready for the analysis performed in the accompanying Jupyter Notebook (`scripts_for_data_cleaning.ipynb`).
+The primary script (`notebooks/main.ipynb`) automates the ingestion and cleaning of raw GTFS data, making it ready for the analysis performed in the accompanying Jupyter Notebook (`scripts_for_data_cleaning.ipynb`).
 
 
 ---
@@ -49,8 +49,8 @@ Follow these steps to replicate the project environment.
 
 ### Step 1: Clone the Repository
 ```bash
-git clone <https://github.com/AbishekThapa/South-East-Queensland-Public-Transport-Analysis.git>
-cd <South-East-Queensland-Public-Transport-Analysis>
+git clone https://github.com/AbishekThapa/South-East-Queensland-Public-Transport-Analysis.git
+cd South-East-Queensland-Public-Transport-Analysis
 ```
 
 ### Step 2: Set up Environment and Dependencies
@@ -58,10 +58,13 @@ It is highly recommended to use a virtual environment.
 ```bash
 # Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate  
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
 
-# Install required packages
 pip install -r requirements.txt
+
 ```
 
 ### Step 3: Set up PostgreSQL
@@ -78,10 +81,10 @@ Ensure you have a PostgreSQL server running. Create a database for this project 
 ### Step 6: Run the Pipeline
 1.  **Execute the ETL script** to populate and clean the database:
     ```bash
-    main.ipynb
+    Open `main.ipynb` and run the cells to generate the analyses and visualizations.
     ```
 2.  **Launch Jupyter Notebook** to run the analysis:
     ```bash
     jupyter notebook
     ```
-    Open `main.ipynb` and run the cells to generate the analyses and visualizations.
+    
