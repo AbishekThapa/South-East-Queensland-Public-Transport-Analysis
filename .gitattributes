@@ -1,0 +1,2 @@
+seq-translink-etl/data/stop_times.txt filter=lfs diff=lfs merge=lfs -text
+seq-translink-etl/data/shapes.txt filter=lfs diff=lfs merge=lfs -text
