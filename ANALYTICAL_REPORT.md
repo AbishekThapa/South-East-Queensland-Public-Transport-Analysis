@@ -24,13 +24,13 @@
 
 ## Table of Contents
 
-1. [Executive Summary](#executive-summary)  
-2. [Introduction](#1-introduction)  
-3. [Problem Statement & Hypotheses](#2-problem-statement--hypotheses)  
-4. [Methodology](#3-methodology)  
-5. [Analysis and Findings](#4-analysis-and-findings)  
-6. [Limitations](#5-limitations-of-the-analysis)  
-7. [Conclusion & Recommendations](#6-conclusion--recommendations)  
+1. [Executive Summary](#1-executive-summary)  
+2. [Introduction](#2-introduction)  
+3. [Problem Statement & Hypotheses](#3-problem-statement--hypotheses)  
+4. [Methodology](#4-methodology)  
+5. [Analysis and Findings](#5-analysis-and-findings)  
+6. [Limitations of the Analysis](#6-limitations-of-the-analysis)  
+7. [Conclusion & Recommendations](#7-conclusion--recommendations)  
 ---
 ### 1. Executive Summary
 
