@@ -1,0 +1,41 @@
+2025-07-03 14:04:48,115 - INFO - --- Starting SEQ Bus Data ETL Process ---
+2025-07-03 14:04:48,204 - INFO - Successfully connected to PostgreSQL database.
+2025-07-03 14:04:48,205 - INFO - Reading calendar_dates.txt from directory...
+2025-07-03 14:04:48,323 - INFO - Successfully loaded data into table 'calendar_dates'.
+2025-07-03 14:04:48,323 - INFO - Reading calendar.txt from directory...
+2025-07-03 14:04:48,372 - INFO - Successfully loaded data into table 'calendar'.
+2025-07-03 14:04:48,372 - INFO - Reading routes.txt from directory...
+2025-07-03 14:04:48,474 - INFO - Successfully loaded data into table 'routes'.
+2025-07-03 14:04:48,474 - INFO - Reading shapes.txt from directory...
+2025-07-03 14:05:31,094 - INFO - Successfully loaded data into table 'shapes'.
+2025-07-03 14:05:31,094 - INFO - Reading stop_times.txt from directory...
+2025-07-03 14:07:19,119 - INFO - Successfully loaded data into table 'stop_times'.
+2025-07-03 14:07:19,119 - INFO - Reading stops.txt from directory...
+2025-07-03 14:07:19,932 - INFO - Successfully loaded data into table 'stops'.
+2025-07-03 14:07:19,933 - INFO - Reading trips.txt from directory...
+2025-07-03 14:07:22,994 - INFO - Successfully loaded data into table 'trips'.
+2025-07-03 14:07:22,994 - INFO - --- ETL Process Finished in 2 minutes and 34.88 seconds. ---
+2025-07-03 14:07:23,121 - INFO - Successfully connected to PostgreSQL database.
+2025-07-03 14:07:41,651 - INFO - Cleaning 'routes' table
+2025-07-03 14:07:41,653 - INFO - Cleaning 'routes' table
+2025-07-03 14:07:41,661 - INFO - Convert  'calendar' date column
+2025-07-03 14:07:41,668 - INFO - Convert  'calendar_dates' date column
+2025-07-03 14:07:41,670 - INFO - Checking all tables for duplicate row
+2025-07-03 14:07:41,671 - INFO - No Duplicate rows found in calendar_dates
+2025-07-03 14:07:41,673 - INFO - No Duplicate rows found in calendar
+2025-07-03 14:07:41,676 - INFO - No Duplicate rows found in routes
+2025-07-03 14:07:42,045 - INFO - No Duplicate rows found in shapes
+2025-07-03 14:07:43,772 - INFO - No Duplicate rows found in stop_times
+2025-07-03 14:07:43,788 - INFO - No Duplicate rows found in stops
+2025-07-03 14:07:43,877 - INFO - No Duplicate rows found in trips
+2025-07-03 14:07:43,878 - INFO - Trimming Whitespaces from 'route_df' columns
+2025-07-03 14:07:43,880 - INFO - Trimming Whitespaces from 'stops_df' columns
+2025-07-03 14:07:43,886 - INFO - Pushing all modified data back to PostgreSQL...
+2025-07-03 14:07:43,973 - INFO - Successfully connected to PostgreSQL database.
+2025-07-03 14:10:18,892 - INFO - All cleaned tables have been successfully pushed to the database
+2025-07-03 14:10:19,092 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-03 14:10:19,097 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-03 14:10:19,627 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-03 14:10:19,635 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-03 14:58:24,163 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-03 14:58:24,168 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
