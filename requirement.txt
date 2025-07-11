@@ -3,3 +3,4 @@ matplotlib
 seaborn
 sqlalchemy
 folium
+psycopg2
