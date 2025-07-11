@@ -56,13 +56,13 @@ The primary challenge is to process a complex, multi-file relational dataset to 
 The analysis was conducted using a two-phase methodology:
 
 1.  **Data Processing (ETL):** Raw GTFS [`seq-translink-etl/data`](seq-translink-etl/data/) files were ingested into a PostgreSQL database using a Python script. This phase included critical data cleaning steps: handling missing values, correcting data types, removing duplicates, and standardizing text fields. This resulted in a clean, reliable, and analysis-ready relational database.
-2.  **Data Analysis & Visualization:** SQL queries were executed against the database to aggregate and extract data. These queries utilized joins and Common Table Expressions (CTEs) to synthesize information from multiple tables. The resulting data was visualized using Python libraries (Matplotlib, Seaborn, Folium) to illustrate key findings.
+2.  **Data Analysis & Visualization:** A Jupyter Notebook was used to connect to the database, load the raw data, and perform all data cleaning. Subsequent analysis was performed using SQL queries, including **window functions (`RANK()`, `ROW_NUMBER()`)**, to aggregate and extract insights. The results were visualized using Python libraries (Matplotlib, Seaborn, Folium).
 
 ### 5. Analysis and Findings
 
 #### 5.1. Top 10 Most Frequent Routes
 ![Top 10 Bus Routes](images/top_10_bus_route.png)
-**Finding:** As predicted by **Hypothesis 1**, a few routes dominate service frequency. The CityGlider (60, 61) and UQ Lakes (66) routes have substantially more scheduled trips than others, establishing them as the primary arteries of the bus network.
+**Finding:** As predicted by **Hypothesis 1**, a few routes dominate service frequency. **The CityGlider (60, 61) and UQ Lakes (66)** routes have substantially more scheduled trips than others, establishing them as the primary arteries of the bus network.
 
 #### 5.2. Service Levels by Day of the Week
 ![Trips per Weekday](images/service_levels_by_day_of_the_week.png)
@@ -70,7 +70,6 @@ The analysis was conducted using a two-phase methodology:
 
 #### 5.3. Busiest Transport Hubs
 ![Top 10 Bus Stops](images/busiest_bus_hub.png)
-![Top 10 Train Stations](images/Busiest%20Train%20Hub.png)
 **Finding:** The busiest bus and train stops are overwhelmingly located in or directly adjacent to the Brisbane CBD (e.g., King George Square, Cultural Centre, Central Station). This confirms **Hypothesis 3**, highlighting the CBD's role as the network's central nexus.
 
 #### 5.4. Geographic Distribution of All Stops
@@ -82,7 +81,24 @@ The analysis was conducted using a two-phase methodology:
 ![Hourly Heatmap](images/hourly_activity_heatmaps.png)
 **Finding:** These heatmaps provide compelling evidence for **Hypothesis 4**. The weekly heatmap reinforces the weekday vs. weekend service drop-off across all major stops. The hourly heatmap clearly illustrates the bimodal commuter pattern, with activity peaking between 7-9 AM and 4-6 PM.
 
-### 6. Limitations of the Analysis
+#### 6. Analysis with Window Functions
+
+To gain deeper insights, we used SQL window functions for ranking and sequential analysis.
+
+##### **Service Span of Key Routes**
+**Finding:** By using `ROW_NUMBER()` to identify the first and last trips of the day for key routes, we can visualize their operational hours. The chart clearly shows that high-frequency routes like the **CityGlider (60)** not only have many trips but also the longest service span, starting early in the morning and running late into the night, confirming their role as the network's core arteries.
+
+##### **Ranking Routes by Number of Stops**
+```
+Top 15 Bus Routes Ranked by Number of Unique Stops Serviced:
+   route_short_name                route_long_name  stop_count  rank_val    dense_rank_val
+0               599     Great Circle Line anti-clockwise         173         1               1
+1               598        Great Circle Line clockwise           172         2               2
+2               330  Bracken Ridge to City, Queen Street         109         3               3
+...
+```
+**Finding:** Using `RANK()` and `DENSE_RANK()`, I identified the routes with the most extensive coverage. The **"Great Circle Line" routes (598/599)** service the highest number of unique stops, indicating they are crucial for connecting a wide range of suburbs rather than just a direct point-to-point corridor. This analysis helps distinguish between high-frequency routes and high-coverage routes.
+### 7. Limitations of the Analysis
 
 It is crucial to acknowledge the limitations of this study, which offer avenues for future work:
 
@@ -98,4 +114,4 @@ Based on these findings and limitations, the following next steps are recommende
 
 *   **Performance Analysis:** Integrate real-time GTFS data to analyze on-time performance and identify routes or times of day prone to delays.
 *   **Accessibility Study:** Use network graph analysis to identify "transport deserts" or areas with poor access to key amenities like hospitals and employment centers.
-*   **Develop an Interactive Dashboard:** Create a web-based dashboard (using Streamlit or Dash) to allow planners and the public to explore these insights dynamically.
+*   **Develop an Interactive Dashboard:** Create a web-based dashboard (using Streamlit or Dash) or Power BI to allow planners and the public to explore these insights dynamically.
