@@ -1,11 +1,5 @@
-import config
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sqlalchemy import create_engine
-import logging
-import warnings
-warnings.filterwarnings('ignore')
-import time
-import folium
-from folium.plugins import MarkerCluster
+pandas
+matplotlib
+seaborn
+sqlalchemy
+folium
