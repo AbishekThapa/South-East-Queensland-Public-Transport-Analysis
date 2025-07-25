@@ -92,15 +92,16 @@ Ensure you have a PostgreSQL server running. Create a database for this project 
 
 This repository showcases an end-to-end data analytics project, culminating in an interactive Power BI dashboard that analyzes the South East Queensland (Translink) public transport network. The project begins with a Python-based ETL pipeline to process raw GTFS data and concludes with a dynamic, user-friendly business intelligence tool.
 
-**[➡️ Download the Live Interactive Dashboard Here](PoweBi_Dashboard\seq_dashboard.pbix)**
+**[➡️ Download the Live Interactive Dashboard File Here](PoweBi_Dashboard/seq_dashboard.pbix)**
 
-![Dashboard Screenshot](PoweBi_Dashboard\Screenshots\Dashboard.png)
+![Dashboard Screenshot](PoweBi_Dashboard/Screenshots/Dashboard.png)
+
 ---
 
 ## Dashboard Features
 
 *   **Key Performance Indicators (KPIs):** At-a-glance cards display the total number of routes, stops, and scheduled trips across the network.
-*   **Interactive Slicing & Filtering:** Users can dynamically filter the entire report by Mode of Transport ([Bus](PoweBi_Dashboard\Screenshots\bus.png), [Train](PoweBi_Dashboard\Screenshots\train.png), [Ferry](PoweBi_Dashboard\Screenshots\ferry.png), [Tram](PoweBi_Dashboard\Screenshots\ferry.png)) and by Day of the Week.
+*   **Interactive Slicing & Filtering:** Users can dynamically filter the entire report by Mode of Transport ([Bus](PoweBi_Dashboard/Screenshots/bus.png), [Train](PoweBi_Dashboard/Screenshots/train.png), [Ferry](PoweBi_Dashboard/Screenshots/ferry.png), [Tram](PoweBi_Dashboard/Screenshots/tram.png)) and by Day of the Week.
 *   **Geospatial Analysis:** An interactive map plots all stop locations, providing a clear view of network coverage and density.
 *   **Performance Analysis:** A series of visuals break down performance by:
     *   Top 10 most frequent routes.
